@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login & Sign Up - CampusCloud Portal</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/auth.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="auth-body">
+
+  <div class="auth-bg-circle-1"></div>
+  <div class="auth-bg-circle-2"></div>
+
+  <div class="auth-container">
+    <div class="auth-card">
+      <div class="auth-header">
+        <a href="index.html" class="auth-logo">
+          <div class="auth-logo-icon">☁️</div>
+          <span>CampusCloud</span>
+        </a>
+        <p class="auth-subtitle">Select role & access the campus portal</p>
+      </div>
+
+      <!-- Main Role Selector (Student vs Club Head) -->
+      <div class="role-selector">
+        <button id="roleStudent" type="button" class="role-btn active">
+          🎓 Student
+        </button>
+        <button id="roleClubHead" type="button" class="role-btn">
+          👑 Club Head
+        </button>
+      </div>
+
+      <!-- Auth Action Mode (Sign In vs Create Account) - shown for Student -->
+      <div id="authModeTabs" style="display: flex; border-bottom: 2px solid var(--border-color); margin-bottom: 1.5rem; gap: 1rem;">
+        <button id="tabSignIn" type="button" style="padding: 0.5rem 0.75rem; font-weight: 700; font-size: 0.95rem; color: var(--primary); border-bottom: 2px solid var(--primary); margin-bottom: -2px; cursor: pointer;">
+          Sign In
+        </button>
+        <button id="tabSignUp" type="button" style="padding: 0.5rem 0.75rem; font-weight: 600; font-size: 0.95rem; color: var(--text-muted); cursor: pointer;">
+          Create New Account
+        </button>
+      </div>
+
+      <!-- 1. SIGN IN FORM -->
+      <form id="signInForm">
+        <div class="form-group">
+          <label class="form-label" for="loginEmail">Email Address</label>
+          <div class="auth-input-wrapper">
+            <span class="auth-input-icon">✉️</span>
+            <input type="email" id="loginEmail" class="auth-control" value="student@campuscloud.edu" required placeholder="student@campuscloud.edu">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="loginPassword">Password</label>
+          <div class="auth-input-wrapper">
+            <span class="auth-input-icon">🔒</span>
+            <input type="password" id="loginPassword" class="auth-control" value="password123" required placeholder="••••••••">
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-lg btn-primary" style="width: 100%; margin-top: 0.5rem;">
+          Sign In to Portal →
+        </button>
+      </form>
+
+      <!-- 2. CREATE ACCOUNT FORM (Student Only) -->
+      <form id="signUpForm" style="display: none;">
+        <div class="form-group">
+          <label class="form-label" for="registerName">Full Name</label>
+          <div class="auth-input-wrapper">
+            <span class="auth-input-icon">👤</span>
+            <input type="text" id="registerName" class="auth-control" placeholder="e.g. Student Name" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="registerEmail">Email Address</label>
+          <div class="auth-input-wrapper">
+            <span class="auth-input-icon">✉️</span>
+            <input type="email" id="registerEmail" class="auth-control" placeholder="student@campuscloud.edu" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="registerDept">Department</label>
+            <select id="registerDept" class="auth-control" style="padding-left: 1rem;">
+              <option value="Computer Engineering">Computer Engg</option>
+              <option value="Information Technology">Information Tech</option>
+              <option value="Electronics">Electronics</option>
+              <option value="Mechanical">Mechanical</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="registerYear">Year</label>
+            <select id="registerYear" class="auth-control" style="padding-left: 1rem;">
+              <option value="First Year">First Year</option>
+              <option value="Second Year">Second Year</option>
+              <option value="Third Year">Third Year</option>
+              <option value="Fourth Year">Fourth Year</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="registerPassword">Password</label>
+          <div class="auth-input-wrapper">
+            <span class="auth-input-icon">🔒</span>
+            <input type="password" id="registerPassword" class="auth-control" placeholder="Create password" required>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-lg btn-primary" style="width: 100%; margin-top: 0.5rem;">
+          Create Student Account →
+        </button>
+      </form>
+
+      <!-- Quick 1-Click Login for Fast Demo -->
+      <div class="demo-login-box">
+        <div class="demo-title">⚡ Quick 1-Click Access</div>
+        <div class="demo-buttons">
+          <button id="quickStudentBtn" type="button" class="btn btn-sm btn-secondary">
+            🎓 Student Portal
+          </button>
+          <button id="quickClubHeadBtn" type="button" class="btn btn-sm btn-secondary">
+            👑 Club Head Portal
+          </button>
+        </div>
+      </div>
+
+      <div class="back-to-home">
+        <a href="index.html">← Back to Home Page</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/mockData.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

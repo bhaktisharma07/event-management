@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manage Announcements - Club Head Portal</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div id="clubHeadAnnouncementsView" class="app-layout">
+
+    <!-- Sidebar -->
+    <aside id="portalSidebar" class="sidebar">
+      <div class="sidebar-header">
+        <div class="brand-icon">👑</div>
+        <span class="brand" style="font-size: 1.15rem;">CampusCloud</span>
+      </div>
+
+      <ul class="sidebar-menu">
+        <li class="sidebar-item-label">Club Head Portal</li>
+        <li><a href="dashboard.html" class="sidebar-link"><span class="sidebar-icon">📊</span> Dashboard</a></li>
+        <li><a href="events.html" class="sidebar-link"><span class="sidebar-icon">📅</span> Manage Events</a></li>
+        <li><a href="members.html" class="sidebar-link"><span class="sidebar-icon">👥</span> Manage Members</a></li>
+        <li><a href="announcements.html" class="sidebar-link active"><span class="sidebar-icon">📢</span> Announcements</a></li>
+      </ul>
+
+      <div class="sidebar-footer">
+        <div class="user-badge-card">
+          <div class="user-avatar" style="background: linear-gradient(135deg, #f59e0b, #ef4444);">CH</div>
+          <div class="user-info-text">
+            <div class="user-name">Club Head</div>
+            <div class="user-role-tag">Club Coordinator</div>
+          </div>
+        </div>
+        <button onclick="logoutUser()" class="btn btn-sm btn-outline" style="width: 100%; margin-top: 0.75rem;">
+          Logout 👋
+        </button>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="main-wrapper">
+      
+      <!-- Top Header -->
+      <header class="top-header">
+        <div style="display: flex; align-items: center; gap: 1rem;">
+          <button id="sidebarToggle" class="mobile-sidebar-toggle">☰</button>
+          <div class="top-header-title">
+            <h2>Manage Announcements</h2>
+            <p>Publish live broadcasts & updates to student dashboards</p>
+          </div>
+        </div>
+        <div class="header-right-actions">
+          <button onclick="openModal('postAnnouncementModal')" class="btn btn-primary">+ Post Announcement</button>
+        </div>
+      </header>
+
+      <!-- Content -->
+      <main class="dashboard-content">
+
+        <div class="panel-card">
+          <div class="panel-header">
+            <h3 class="panel-title">📢 Live Published Announcements</h3>
+            <button onclick="openModal('postAnnouncementModal')" class="btn btn-sm btn-primary">+ New Announcement</button>
+          </div>
+          <div class="panel-body" style="padding: 0;">
+            <div class="data-table-wrapper">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Title & Message Content</th>
+                    <th>Priority</th>
+                    <th>Date Posted</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="headAnnouncementsTable">
+                  <!-- Populated dynamically -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+      </main>
+
+    </div>
+
+  </div>
+
+  <!-- Post Announcement Modal -->
+  <div id="postAnnouncementModal" class="modal-overlay">
+    <div class="modal-container">
+      <div class="modal-header">
+        <h3 class="modal-title">Publish Live Announcement</h3>
+        <button onclick="closeModal('postAnnouncementModal')" class="modal-close-btn">✕</button>
+      </div>
+      <form id="postAnnouncementForm">
+        <div class="modal-body">
+          
+          <div class="form-group">
+            <label class="form-label" for="annTitle">Announcement Title</label>
+            <input type="text" id="annTitle" class="form-control" placeholder="e.g. Astronomy Night Registrations Closing Soon!" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="annPriority">Priority Level</label>
+            <select id="annPriority" class="form-control">
+              <option value="High">High Priority</option>
+              <option value="Medium">Medium Priority</option>
+              <option value="Normal">Normal Priority</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="annMessage">Broadcast Message Content</label>
+            <textarea id="annMessage" class="form-control" placeholder="Type the announcement details that will appear live on student dashboards..." required></textarea>
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" onclick="closeModal('postAnnouncementModal')" class="btn btn-secondary">Cancel</button>
+          <button type="submit" class="btn btn-primary">Publish Announcement 📢</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="../js/mockData.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/club-head.js"></script>
+</body>
+</html>

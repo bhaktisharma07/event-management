@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Browse Clubs - CampusCloud Student Portal</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div id="studentClubsView" class="app-layout">
+
+    <!-- Sidebar -->
+    <aside id="portalSidebar" class="sidebar">
+      <div class="sidebar-header">
+        <div class="brand-icon">☁️</div>
+        <span class="brand" style="font-size: 1.15rem;">CampusCloud</span>
+      </div>
+
+      <ul class="sidebar-menu">
+        <li class="sidebar-item-label">Student Navigation</li>
+        <li><a href="dashboard.html" class="sidebar-link"><span class="sidebar-icon">📊</span> Dashboard</a></li>
+        <li><a href="events.html" class="sidebar-link"><span class="sidebar-icon">📅</span> Browse Events</a></li>
+        <li><a href="clubs.html" class="sidebar-link active"><span class="sidebar-icon">🛡️</span> Browse Clubs</a></li>
+        <li><a href="profile.html" class="sidebar-link"><span class="sidebar-icon">👤</span> My Profile</a></li>
+      </ul>
+
+      <div class="sidebar-footer">
+        <div class="user-badge-card">
+          <div class="user-avatar">ST</div>
+          <div class="user-info-text">
+            <div class="user-name student-user-name">Student</div>
+            <div class="user-role-tag">Student Portal</div>
+          </div>
+        </div>
+        <button onclick="logoutUser()" class="btn btn-sm btn-outline" style="width: 100%; margin-top: 0.75rem;">
+          Logout 👋
+        </button>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="main-wrapper">
+      
+      <!-- Top Header -->
+      <header class="top-header">
+        <div style="display: flex; align-items: center; gap: 1rem;">
+          <button id="sidebarToggle" class="mobile-sidebar-toggle">☰</button>
+          <div class="top-header-title">
+            <h2>Campus Clubs Directory</h2>
+            <p>Explore student chapters & join communities</p>
+          </div>
+        </div>
+        <div class="header-right-actions">
+          <span class="role-pill-badge">🎓 Student Portal</span>
+        </div>
+      </header>
+
+      <!-- Content -->
+      <main class="dashboard-content">
+
+        <!-- Search Bar -->
+        <div class="panel-card" style="padding: 1.25rem; margin-bottom: 2rem;">
+          <div class="form-group" style="margin-bottom: 0;">
+            <input type="text" id="clubSearchInput" class="form-control" placeholder="🔍 Search clubs by name or domain (e.g., Astronomy, Technical, Cultural)...">
+          </div>
+        </div>
+
+        <!-- Clubs Grid -->
+        <div id="clubsGridContainer" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(310px, 1fr)); gap: 1.75rem;">
+          <!-- Populated dynamically by JS -->
+        </div>
+
+      </main>
+
+    </div>
+
+  </div>
+
+  <script src="../js/mockData.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/student.js"></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "name": "campuscloud",
+  "version": "1.0.0",
+  "description": "CampusCloud - College Club Management Portal",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx serve -l 3000 ."
+  },
+  "keywords": [
+    "campuscloud",
+    "college-portal",
+    "event-management"
+  ],
+  "author": "",
+  "license": "ISC"
+}

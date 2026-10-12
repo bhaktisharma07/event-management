@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manage Members - Club Head Portal</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div id="clubHeadMembersView" class="app-layout">
+
+    <!-- Sidebar -->
+    <aside id="portalSidebar" class="sidebar">
+      <div class="sidebar-header">
+        <div class="brand-icon">👑</div>
+        <span class="brand" style="font-size: 1.15rem;">CampusCloud</span>
+      </div>
+
+      <ul class="sidebar-menu">
+        <li class="sidebar-item-label">Club Head Portal</li>
+        <li><a href="dashboard.html" class="sidebar-link"><span class="sidebar-icon">📊</span> Dashboard</a></li>
+        <li><a href="events.html" class="sidebar-link"><span class="sidebar-icon">📅</span> Manage Events</a></li>
+        <li><a href="members.html" class="sidebar-link active"><span class="sidebar-icon">👥</span> Manage Members</a></li>
+        <li><a href="announcements.html" class="sidebar-link"><span class="sidebar-icon">📢</span> Announcements</a></li>
+      </ul>
+
+      <div class="sidebar-footer">
+        <div class="user-badge-card">
+          <div class="user-avatar" style="background: linear-gradient(135deg, #f59e0b, #ef4444);">CH</div>
+          <div class="user-info-text">
+            <div class="user-name">Club Head</div>
+            <div class="user-role-tag">Club Coordinator</div>
+          </div>
+        </div>
+        <button onclick="logoutUser()" class="btn btn-sm btn-outline" style="width: 100%; margin-top: 0.75rem;">
+          Logout 👋
+        </button>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="main-wrapper">
+      
+      <!-- Top Header -->
+      <header class="top-header">
+        <div style="display: flex; align-items: center; gap: 1rem;">
+          <button id="sidebarToggle" class="mobile-sidebar-toggle">☰</button>
+          <div class="top-header-title">
+            <h2>Manage Club Members</h2>
+            <p>View active member roster & register new student recruits</p>
+          </div>
+        </div>
+        <div class="header-right-actions">
+          <button onclick="openModal('addMemberModal')" class="btn btn-primary">+ Add New Member</button>
+        </div>
+      </header>
+
+      <!-- Content -->
+      <main class="dashboard-content">
+
+        <div class="panel-card">
+          <div class="panel-header">
+            <h3 class="panel-title">👥 Member Directory</h3>
+            <button onclick="openModal('addMemberModal')" class="btn btn-sm btn-primary">+ Add Member</button>
+          </div>
+          <div class="panel-body" style="padding: 0;">
+            <div class="data-table-wrapper">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Student Name & Email</th>
+                    <th>Department</th>
+                    <th>Year</th>
+                    <th>Role / Status</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="headMembersTable">
+                  <!-- Populated dynamically -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+      </main>
+
+    </div>
+
+  </div>
+
+  <!-- Add Member Modal -->
+  <div id="addMemberModal" class="modal-overlay">
+    <div class="modal-container">
+      <div class="modal-header">
+        <h3 class="modal-title">Add New Club Member</h3>
+        <button onclick="closeModal('addMemberModal')" class="modal-close-btn">✕</button>
+      </div>
+      <form id="addMemberForm">
+        <div class="modal-body">
+          
+          <div class="form-group">
+            <label class="form-label" for="memberName">Student Name</label>
+            <input type="text" id="memberName" class="form-control" placeholder="e.g. Student Name" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="memberEmail">Institutional Email</label>
+            <input type="email" id="memberEmail" class="form-control" placeholder="e.g. student@campuscloud.edu" required>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="memberDept">Department</label>
+              <select id="memberDept" class="form-control">
+                <option value="IT Engineering">IT Engineering</option>
+                <option value="Computer Engineering">Computer Engineering</option>
+                <option value="E&TC Engineering">E&TC Engineering</option>
+                <option value="Mechanical Engineering">Mechanical Engineering</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="memberYear">Academic Year</label>
+              <select id="memberYear" class="form-control">
+                <option value="First Year">First Year</option>
+                <option value="Second Year">Second Year</option>
+                <option value="Third Year">Third Year</option>
+                <option value="Fourth Year">Fourth Year</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="memberRole">Role in Club</label>
+            <select id="memberRole" class="form-control">
+              <option value="Active Member">Active Member</option>
+              <option value="Executive Member">Executive Member</option>
+              <option value="Technical Lead">Technical Lead</option>
+              <option value="Event Coordinator">Event Coordinator</option>
+            </select>
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" onclick="closeModal('addMemberModal')" class="btn btn-secondary">Cancel</button>
+          <button type="submit" class="btn btn-primary">Add Member</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="../js/mockData.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/club-head.js"></script>
+</body>
+</html>

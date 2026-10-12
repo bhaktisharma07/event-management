@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CampusCloud - College Club & Event Management Portal</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="brand">
+        <div class="brand-icon">☁️</div>
+        <span>CampusCloud</span>
+        <span class="brand-tag">Portal</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#features" class="nav-link">Features</a></li>
+        <li><a href="#events" class="nav-link">Live Events</a></li>
+        <li><a href="#clubs" class="nav-link">Clubs</a></li>
+        <li><a href="#how-it-works" class="nav-link">How it Works</a></li>
+        <li><a href="#testimonials" class="nav-link">Reviews</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="login.html" class="btn btn-outline">Sign In</a>
+        <a href="login.html" class="btn btn-primary">Get Started →</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    
+    <!-- Hero Section (2-Column Layout with Visual Live Portal Preview Card) -->
+    <section class="hero" style="background: linear-gradient(135deg, #eef2ff 0%, #e0f2fe 50%, #f0fdf4 100%); color: var(--text-main); padding: 5rem 0 6rem; border-bottom: 1px solid var(--border-color); overflow: hidden;">
+      <div class="container">
+        <div style="display: grid; grid-template-columns: 1.15fr 0.85fr; align-items: center; gap: 3.5rem;">
+          
+          <!-- Left Content -->
+          <div class="hero-content">
+            <div style="display: inline-flex; align-items: center; gap: 0.5rem; background: #ffffff; color: var(--primary); padding: 0.45rem 1.1rem; border-radius: var(--radius-full); font-size: 0.875rem; font-weight: 700; margin-bottom: 1.5rem; border: 1px solid var(--border-color); box-shadow: var(--shadow-sm);">
+              ✨ Centralized College Event & Club Hub
+            </div>
+            
+            <h1 style="font-size: 3.6rem; font-weight: 800; line-height: 1.12; margin-bottom: 1.35rem; letter-spacing: -0.025em; color: var(--text-main);">
+              Connect, Organize & Elevate Your <span style="color: var(--primary);">College Campus Life</span>
+            </h1>
+            
+            <p style="font-size: 1.2rem; color: var(--text-muted); margin-bottom: 2.25rem; line-height: 1.65; max-width: 680px;">
+              CampusCloud is the modern web portal for students and club leaders. Discover exciting hackathons, manage club memberships, get instant digital QR passes, and publish real-time announcements.
+            </p>
+            
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 3rem;">
+              <a href="login.html" class="btn btn-lg btn-primary">Explore Student Portal →</a>
+              <a href="login.html" class="btn btn-lg btn-secondary">Club Head Workspace</a>
+            </div>
+
+            <!-- Quick Stats Row -->
+            <div style="display: flex; gap: 3.5rem; padding-top: 2.25rem; border-top: 1px solid rgba(79, 70, 229, 0.15);">
+              <div>
+                <h3 style="font-size: 2.25rem; font-weight: 800; color: var(--primary); line-height: 1;">15+</h3>
+                <p style="font-size: 0.875rem; font-weight: 600; color: var(--text-muted); margin-top: 0.35rem;">Active Clubs</p>
+              </div>
+              <div>
+                <h3 style="font-size: 2.25rem; font-weight: 800; color: var(--secondary); line-height: 1;">50+</h3>
+                <p style="font-size: 0.875rem; font-weight: 600; color: var(--text-muted); margin-top: 0.35rem;">Events Hosted</p>
+              </div>
+              <div>
+                <h3 style="font-size: 2.25rem; font-weight: 800; color: var(--success); line-height: 1;">1,200+</h3>
+                <p style="font-size: 0.875rem; font-weight: 600; color: var(--text-muted); margin-top: 0.35rem;">Active Students</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Visual Portal Interactive Mockup Graphic -->
+          <div style="position: relative;">
+            <div style="background: #ffffff; border-radius: var(--radius-xl); border: 1px solid var(--border-color); padding: 1.75rem; box-shadow: var(--shadow-xl); position: relative; z-index: 2;">
+              
+              <!-- Mock Header -->
+              <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--border-color); padding-bottom: 1rem; margin-bottom: 1.25rem;">
+                <div style="display: flex; align-items: center; gap: 0.65rem;">
+                  <div style="width: 34px; height: 34px; border-radius: 50%; background: linear-gradient(135deg, var(--primary), var(--secondary)); color: white; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.85rem;">ST</div>
+                  <div>
+                    <div style="font-weight: 700; font-size: 0.9rem;">Student</div>
+                    <div style="font-size: 0.75rem; color: var(--text-muted);">Campus Member</div>
+                  </div>
+                </div>
+                <span class="badge badge-emerald">Active Portal ✓</span>
+              </div>
+
+              <!-- Featured Mock Event Card -->
+              <div style="background: var(--bg-subtle); border-radius: var(--radius-lg); padding: 1.25rem; border: 1px solid var(--border-color); margin-bottom: 1.25rem;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                  <span class="badge badge-indigo">TECHNICAL</span>
+                  <span style="font-size: 0.775rem; font-weight: 700; color: var(--primary);">📅 15 Oct 2026</span>
+                </div>
+                <h4 style="font-size: 1.1rem; font-weight: 800; margin-bottom: 0.35rem;">Astronomy Night Stargazing</h4>
+                <p style="font-size: 0.825rem; color: var(--text-muted); margin-bottom: 0.85rem;">Observe Saturn's rings & Lunar craters with telescopes.</p>
+                <div style="display: flex; justify-content: space-between; align-items: center; background: white; padding: 0.6rem 0.85rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+                  <span style="font-size: 0.8rem; font-weight: 600; color: var(--text-main);">👥 54 / 100 Registrations</span>
+                  <span style="font-size: 0.775rem; font-weight: 700; color: var(--success);">Pass Issued 🎟️</span>
+                </div>
+              </div>
+
+              <!-- Live Announcement Box -->
+              <div style="background: #e0f2fe; border-radius: var(--radius-md); padding: 1rem; border: 1px solid #bae6fd; display: flex; gap: 0.75rem; align-items: flex-start;">
+                <span style="font-size: 1.25rem;">📢</span>
+                <div>
+                  <h5 style="font-size: 0.875rem; font-weight: 700; color: #0369a1;">SIH Hackathon Registrations Open</h5>
+                  <p style="font-size: 0.8rem; color: #0c4a6e; margin-top: 0.15rem;">Coding Club posted an update 10 mins ago.</p>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Decorative Floating Elements -->
+            <div style="position: absolute; top: -20px; right: -20px; background: white; border: 1px solid var(--border-color); padding: 0.75rem 1.25rem; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); font-weight: 700; font-size: 0.85rem; display: flex; align-items: center; gap: 0.5rem; z-index: 3;">
+              <span>🎟️</span> 1-Click Ticket Pass
+            </div>
+            
+            <div style="position: absolute; bottom: -20px; left: -20px; background: white; border: 1px solid var(--border-color); padding: 0.75rem 1.25rem; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); font-weight: 700; font-size: 0.85rem; display: flex; align-items: center; gap: 0.5rem; z-index: 3;">
+              <span>⚡</span> Real-time Dashboard Sync
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Live Upcoming Events Showcase Grid -->
+    <section id="events" style="padding: 5.5rem 0; background-color: var(--bg-main);">
+      <div class="container">
+        <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 3rem;">
+          <div>
+            <span class="badge badge-indigo" style="margin-bottom: 0.5rem;">Live Campus Schedule</span>
+            <h2 style="font-size: 2.25rem; font-weight: 800; color: var(--text-main);">Upcoming Events & Workshops</h2>
+            <p style="color: var(--text-muted); margin-top: 0.25rem;">Browse upcoming activities taking place across campus</p>
+          </div>
+          <a href="login.html" class="btn btn-primary">Browse All Events →</a>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem;">
+          
+          <!-- Event 1 -->
+          <div class="event-item-card" style="box-shadow: var(--shadow-sm);">
+            <div class="event-thumb">
+              <img src="https://images.unsplash.com/photo-1506703719100-a0f3a48c0f86?auto=format&fit=crop&w=800&q=80" alt="Astronomy Night">
+              <span class="event-badge-tag">TECHNICAL</span>
+            </div>
+            <div class="event-details-body">
+              <div class="event-meta-date">📅 15 Oct 2026 • 6:00 PM - 9:30 PM</div>
+              <h3 class="event-title-text">Astronomy Night & Telescope Stargazing</h3>
+              <div class="event-club-name">Organized by: <strong>Astronomy Club</strong></div>
+              <p style="font-size: 0.875rem; color: var(--text-muted); margin-bottom: 1.25rem;">Observe Saturn's rings, lunar craters, and learn celestial photography with professional high-power telescopes.</p>
+              <div class="event-actions-bar">
+                <span style="font-size: 0.85rem; font-weight: 600; color: var(--primary);">👥 54 Registered</span>
+                <a href="login.html" class="btn btn-sm btn-primary">Register Now</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Event 2 -->
+          <div class="event-item-card" style="box-shadow: var(--shadow-sm);">
+            <div class="event-thumb">
+              <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=800&q=80" alt="Web Dev Workshop">
+              <span class="event-badge-tag">TECHNICAL</span>
+            </div>
+            <div class="event-details-body">
+              <div class="event-meta-date">📅 18 Oct 2026 • 10:00 AM - 2:00 PM</div>
+              <h3 class="event-title-text">Web Development Workshop - Modern Frontend</h3>
+              <div class="event-club-name">Organized by: <strong>Coding Club</strong></div>
+              <p style="font-size: 0.875rem; color: var(--text-muted); margin-bottom: 1.25rem;">Hands-on crash course on building modern, responsive, API-ready web apps using HTML5, CSS3, and JavaScript.</p>
+              <div class="event-actions-bar">
+                <span style="font-size: 0.85rem; font-weight: 600; color: var(--primary);">👥 32 Registered</span>
+                <a href="login.html" class="btn btn-sm btn-primary">Register Now</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Event 3 -->
+          <div class="event-item-card" style="box-shadow: var(--shadow-sm);">
+            <div class="event-thumb">
+              <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80" alt="Hackathon">
+              <span class="event-badge-tag">HACKATHON</span>
+            </div>
+            <div class="event-details-body">
+              <div class="event-meta-date">📅 25 Oct 2026 • 9:00 AM Onwards</div>
+              <h3 class="event-title-text">HackCampus 2026 - 24hr Campus Hackathon</h3>
+              <div class="event-club-name">Organized by: <strong>Coding Club</strong></div>
+              <p style="font-size: 0.875rem; color: var(--text-muted); margin-bottom: 1.25rem;">24-hour non-stop innovation battle! Build solutions for Smart Campus & EdTech with ₹40,000 cash prizes.</p>
+              <div class="event-actions-bar">
+                <span style="font-size: 0.85rem; font-weight: 600; color: var(--primary);">👥 88 Registered</span>
+                <a href="login.html" class="btn btn-sm btn-primary">Register Now</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Grid Section -->
+    <section id="features" style="padding: 5.5rem 0; background-color: var(--bg-surface);">
+      <div class="container">
+        <div style="text-align: center; max-width: 680px; margin: 0 auto 3.75rem;">
+          <span class="badge badge-sky" style="margin-bottom: 0.75rem;">Built for Campus Success</span>
+          <h2 style="font-size: 2.35rem; font-weight: 800; margin-bottom: 0.75rem; color: var(--text-main);">Why Colleges Love CampusCloud</h2>
+          <p style="color: var(--text-muted); font-size: 1.05rem;">Eliminating paperwork, WhatsApp group confusion, and manual entry pass management.</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2.25rem;">
+          
+          <div style="padding: 2.25rem; border-radius: var(--radius-lg); border: 1px solid var(--border-color); background-color: var(--bg-main); box-shadow: var(--shadow-sm);">
+            <div style="width: 54px; height: 54px; border-radius: var(--radius-md); background: var(--primary-light); color: var(--primary); display: flex; align-items: center; justify-content: center; font-size: 1.6rem; margin-bottom: 1.35rem;">
+              📅
+            </div>
+            <h3 style="font-size: 1.3rem; font-weight: 700; margin-bottom: 0.6rem; color: var(--text-main);">Unified Event Directory</h3>
+            <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">Browse hackathons, technical workshops, cultural nights, and sports meets with live seat counters and venue details.</p>
+          </div>
+
+          <div style="padding: 2.25rem; border-radius: var(--radius-lg); border: 1px solid var(--border-color); background-color: var(--bg-main); box-shadow: var(--shadow-sm);">
+            <div style="width: 54px; height: 54px; border-radius: var(--radius-md); background: #e0f2fe; color: #0284c7; display: flex; align-items: center; justify-content: center; font-size: 1.6rem; margin-bottom: 1.35rem;">
+              👑
+            </div>
+            <h3 style="font-size: 1.3rem; font-weight: 700; margin-bottom: 0.6rem; color: var(--text-main);">Club Leadership Suite</h3>
+            <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">Club heads create events, monitor attendee rosters, manage active club members, and broadcast live announcements.</p>
+          </div>
+
+          <div style="padding: 2.25rem; border-radius: var(--radius-lg); border: 1px solid var(--border-color); background-color: var(--bg-main); box-shadow: var(--shadow-sm);">
+            <div style="width: 54px; height: 54px; border-radius: var(--radius-md); background: #d1fae5; color: #059669; display: flex; align-items: center; justify-content: center; font-size: 1.6rem; margin-bottom: 1.35rem;">
+              🎟️
+            </div>
+            <h3 style="font-size: 1.3rem; font-weight: 700; margin-bottom: 0.6rem; color: var(--text-main);">Instant QR Passes</h3>
+            <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">Automated printable entry tickets generated instantly in student profiles with verifiable unique QR pass numbers.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works Section (3 Step Visual Guide) -->
+    <section id="how-it-works" style="padding: 5.5rem 0; background-color: var(--bg-main);">
+      <div class="container">
+        <div style="text-align: center; max-width: 650px; margin: 0 auto 4rem;">
+          <span class="badge badge-amber" style="margin-bottom: 0.75rem;">Simple 3-Step Process</span>
+          <h2 style="font-size: 2.35rem; font-weight: 800; color: var(--text-main);">How CampusCloud Works</h2>
+          <p style="color: var(--text-muted); font-size: 1.05rem;">Get started in less than 30 seconds</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2.5rem; position: relative;">
+          
+          <!-- Step 1 -->
+          <div style="background: white; padding: 2.25rem; border-radius: var(--radius-lg); border: 1px solid var(--border-color); box-shadow: var(--shadow-sm); position: relative;">
+            <div style="position: absolute; top: -18px; left: 24px; width: 38px; height: 38px; border-radius: 50%; background: var(--primary); color: white; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1rem;">1</div>
+            <h3 style="font-size: 1.25rem; font-weight: 700; margin-top: 0.5rem; margin-bottom: 0.6rem;">Select Your Role</h3>
+            <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">Log in using your student account or switch to the Club Head workspace for administrative tools.</p>
+          </div>
+
+          <!-- Step 2 -->
+          <div style="background: white; padding: 2.25rem; border-radius: var(--radius-lg); border: 1px solid var(--border-color); box-shadow: var(--shadow-sm); position: relative;">
+            <div style="position: absolute; top: -18px; left: 24px; width: 38px; height: 38px; border-radius: 50%; background: var(--secondary); color: white; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1rem;">2</div>
+            <h3 style="font-size: 1.25rem; font-weight: 700; margin-top: 0.5rem; margin-bottom: 0.6rem;">Browse & Register</h3>
+            <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">Explore clubs, filter workshops by department, and register for events with a single click.</p>
+          </div>
+
+          <!-- Step 3 -->
+          <div style="background: white; padding: 2.25rem; border-radius: var(--radius-lg); border: 1px solid var(--border-color); box-shadow: var(--shadow-sm); position: relative;">
+            <div style="position: absolute; top: -18px; left: 24px; width: 38px; height: 38px; border-radius: 50%; background: var(--success); color: white; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1rem;">3</div>
+            <h3 style="font-size: 1.25rem; font-weight: 700; margin-top: 0.5rem; margin-bottom: 0.6rem;">Get Digital QR Ticket</h3>
+            <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">Receive instant confirmation passes in your student dashboard ready to print or present at the venue.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Clubs Section -->
+    <section id="clubs" style="padding: 5.5rem 0; background-color: var(--bg-surface);">
+      <div class="container">
+        <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 3rem;">
+          <div>
+            <span class="badge badge-sky" style="margin-bottom: 0.5rem;">Campus Organizations</span>
+            <h2 style="font-size: 2.15rem; font-weight: 800; color: var(--text-main);">Featured Student Clubs</h2>
+          </div>
+          <a href="login.html" class="btn btn-outline">Explore All Clubs →</a>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+          
+          <div style="padding: 2rem; border-radius: var(--radius-lg); background: var(--bg-surface); border: 1px solid var(--border-color); box-shadow: var(--shadow-sm); text-align: center;">
+            <div style="font-size: 3.25rem; margin-bottom: 0.85rem;">🔭</div>
+            <h3 style="font-size: 1.25rem; font-weight: 700;">Astronomy Club</h3>
+            <span class="badge badge-indigo" style="margin: 0.5rem 0 0.85rem;">Science & Space</span>
+            <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.35rem; line-height: 1.55;">Exploring stargazing, astrophysics, telescope photography & space tech.</p>
+            <span style="font-size: 0.85rem; font-weight: 700; color: var(--primary);">124 Active Members</span>
+          </div>
+
+          <div style="padding: 2rem; border-radius: var(--radius-lg); background: var(--bg-surface); border: 1px solid var(--border-color); box-shadow: var(--shadow-sm); text-align: center;">
+            <div style="font-size: 3.25rem; margin-bottom: 0.85rem;">💻</div>
+            <h3 style="font-size: 1.25rem; font-weight: 700;">Coding Club</h3>
+            <span class="badge badge-indigo" style="margin: 0.5rem 0 0.85rem;">Technical</span>
+            <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.35rem; line-height: 1.55;">Mastering full-stack web development, algorithms & hackathons.</p>
+            <span style="font-size: 0.85rem; font-weight: 700; color: var(--primary);">210 Active Members</span>
+          </div>
+
+          <div style="padding: 2rem; border-radius: var(--radius-lg); background: var(--bg-surface); border: 1px solid var(--border-color); box-shadow: var(--shadow-sm); text-align: center;">
+            <div style="font-size: 3.25rem; margin-bottom: 0.85rem;">🎭</div>
+            <h3 style="font-size: 1.25rem; font-weight: 700;">Tarang Cultural Club</h3>
+            <span class="badge badge-indigo" style="margin: 0.5rem 0 0.85rem;">Cultural</span>
+            <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.35rem; line-height: 1.55;">Music jams, dance battles, drama, and annual grand fest fests.</p>
+            <span style="font-size: 0.85rem; font-weight: 700; color: var(--primary);">185 Active Members</span>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Student & Club Head Testimonials Section -->
+    <section id="testimonials" style="padding: 5.5rem 0; background-color: var(--bg-main);">
+      <div class="container">
+        <div style="text-align: center; max-width: 650px; margin: 0 auto 3.75rem;">
+          <span class="badge badge-rose" style="margin-bottom: 0.75rem;">Campus Feedback</span>
+          <h2 style="font-size: 2.25rem; font-weight: 800; color: var(--text-main);">Loved by Students & Leaders</h2>
+          <p style="color: var(--text-muted); font-size: 1.05rem;">Here is what college students have to say about CampusCloud</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+          
+          <div style="background: white; padding: 2rem; border-radius: var(--radius-lg); border: 1px solid var(--border-color); box-shadow: var(--shadow-sm);">
+            <div style="color: #f59e0b; font-size: 1.1rem; margin-bottom: 0.75rem;">★★★★★</div>
+            <p style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 1.25rem;">"Organizing campus events used to take spreadsheets and paperwork. With CampusCloud, tracking registrations and managing attendee rosters takes minutes!"</p>
+            <div style="display: flex; align-items: center; gap: 0.75rem;">
+              <div style="width: 40px; height: 40px; border-radius: 50%; background: linear-gradient(135deg, #f59e0b, #ef4444); color: white; display: flex; align-items: center; justify-content: center; font-weight: 800;">AC</div>
+              <div>
+                <h5 style="font-weight: 700; font-size: 0.9rem;">Club Coordinator</h5>
+                <span style="font-size: 0.775rem; color: var(--text-muted);">Astronomy Club</span>
+              </div>
+            </div>
+          </div>
+
+          <div style="background: white; padding: 2rem; border-radius: var(--radius-lg); border: 1px solid var(--border-color); box-shadow: var(--shadow-sm);">
+            <div style="color: #f59e0b; font-size: 1.1rem; margin-bottom: 0.75rem;">★★★★★</div>
+            <p style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 1.25rem;">"Getting digital QR entry passes right on my student profile for campus events and workshops is super smooth. No more paper passes!"</p>
+            <div style="display: flex; align-items: center; gap: 0.75rem;">
+              <div style="width: 40px; height: 40px; border-radius: 50%; background: linear-gradient(135deg, var(--primary), var(--secondary)); color: white; display: flex; align-items: center; justify-content: center; font-weight: 800;">ST</div>
+              <div>
+                <h5 style="font-weight: 700; font-size: 0.9rem;">Student</h5>
+                <span style="font-size: 0.775rem; color: var(--text-muted);">College Member</span>
+              </div>
+            </div>
+          </div>
+
+          <div style="background: white; padding: 2rem; border-radius: var(--radius-lg); border: 1px solid var(--border-color); box-shadow: var(--shadow-sm);">
+            <div style="color: #f59e0b; font-size: 1.1rem; margin-bottom: 0.75rem;">★★★★★</div>
+            <p style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 1.25rem;">"The real-time announcement feed ensures all club members get workshop notices instantly. Best campus portal!"</p>
+            <div style="display: flex; align-items: center; gap: 0.75rem;">
+              <div style="width: 40px; height: 40px; border-radius: 50%; background: linear-gradient(135deg, #10b981, #0ea5e9); color: white; display: flex; align-items: center; justify-content: center; font-weight: 800;">CC</div>
+              <div>
+                <h5 style="font-weight: 700; font-size: 0.9rem;">Club Coordinator</h5>
+                <span style="font-size: 0.775rem; color: var(--text-muted);">Coding Club</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Bottom Call To Action Banner -->
+    <section style="padding: 4.5rem 0; background: linear-gradient(135deg, var(--primary) 0%, var(--primary-hover) 100%); color: white;">
+      <div class="container" style="text-align: center; max-width: 800px;">
+        <h2 style="font-size: 2.5rem; font-weight: 800; margin-bottom: 1rem; color: white;">Ready to Explore Your Campus Events?</h2>
+        <p style="font-size: 1.15rem; opacity: 0.9; margin-bottom: 2.25rem;">Join thousands of students and club leaders organizing the ultimate college experience.</p>
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+          <a href="login.html" class="btn btn-lg btn-secondary" style="background: white; color: var(--primary); border: none; font-weight: 700;">Login to Student Portal →</a>
+          <a href="login.html" class="btn btn-lg btn-outline" style="color: white; border-color: rgba(255,255,255,0.6);">Club Head Workspace</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>☁️ CampusCloud</h3>
+          <p>Cloud Computing based College Club Management Portal. Built for high performance, intuitive interaction, and campus connectivity.</p>
+        </div>
+        <div>
+          <h4 class="footer-title">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="login.html">Login Portal</a></li>
+            <li><a href="#events">Live Events</a></li>
+            <li><a href="#clubs">Clubs</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Portals</h4>
+          <ul class="footer-links">
+            <li><a href="login.html">Student Dashboard</a></li>
+            <li><a href="login.html">Club Head Portal</a></li>
+            <li><a href="login.html">Manage Events</a></li>
+            <li><a href="login.html">Announcements</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Support</h4>
+          <ul class="footer-links">
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">Campus IT Helpdesk</a></li>
+            <li><a href="#">API Documentation</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 CampusCloud Portal. All rights reserved.</p>
+        <p>100% Frontend Powered • API Ready Architecture</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/mockData.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
